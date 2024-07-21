@@ -1,0 +1,16 @@
+{
+    "builds": [{
+        "src": "isrodjango/wsgi.py",
+        "use": "@vercel/python",
+        "config": { 
+            "maxLambdaSize": "15mb",
+            "pythonVersion": "3.9" 
+        }
+    }],
+    "routes": [
+        {
+            "src": "/(.*)",
+            "dest": "isrodjango/wsgi.py"
+        }
+    ]
+}
